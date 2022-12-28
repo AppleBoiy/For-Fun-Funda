@@ -14,14 +14,19 @@ namespace DragableObj
    
       [Header("Counter scene")]
       [SerializeField] public GameObject nextGameDialogBox;
-
-      [Header("Object to show")]
+      
+      [Header("Status")]
       [SerializeField] private GameObject wrongItemGet;
       [SerializeField] private GameObject correctItemGet;
+      
+      [Header("Object to show and hide")]
       [SerializeField] private GameObject showObj1;
       [SerializeField] private GameObject showObj2;
       [SerializeField] private GameObject objectToShow;
       [SerializeField] private GameObject objectToHide;
+      [SerializeField] private GameObject hideObj1;
+      [SerializeField] private GameObject hideObj2;
+      
       private WaitForSeconds _waitForSeconds;
 
       public void OnDrop(PointerEventData eventData)
@@ -29,12 +34,7 @@ namespace DragableObj
          Debug.Log("OnDrop");
          if (eventData.pointerDrag != null)
          {
-         
-            //ID 0 = Show more object ondrop
-            //ID 1 = Drop to Hide and show object
-            //ID 2 = Collect Item
-            //ID ELSE = False
-         
+
             Vector2 outSidePosition = new Vector2(10000, 10000);
             switch (eventData.pointerDrag.GetComponent<DragAndDrop>().id)
             {
@@ -83,7 +83,15 @@ namespace DragableObj
                   objectToShow.SetActive(true);
                   break;
                
-               //Default
+               //Hide multiObject
+               case 5:
+                  eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = outSidePosition;
+                  hideObj1.SetActive(false);
+                  hideObj2.SetActive(false);
+                  objectToShow.SetActive(true);
+                  break;
+               
+               //Default return to main
                default:
                   Debug.Log("False!!");
                   eventData.pointerDrag.GetComponent<DragAndDrop>().ResetPosition();
@@ -101,20 +109,12 @@ namespace DragableObj
          {
             case 3:
                wrongItemGet.SetActive(true);
-               break;
-            case 2:
-               correctItemGet.SetActive(true);
-               break;
-         }
-      
-         yield return new WaitForSeconds(1);
-      
-         switch (id)
-         {
-            case 3:
+               yield return new WaitForSeconds(1);
                wrongItemGet.SetActive(false);
                break;
             case 2:
+               correctItemGet.SetActive(true);
+               yield return new WaitForSeconds(1);
                correctItemGet.SetActive(false);
                break;
          }

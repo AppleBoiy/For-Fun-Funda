@@ -867,7 +867,7 @@ GameObject:
   - component: {fileID: 970664247}
   - component: {fileID: 970664246}
   m_Layer: 5
-  m_Name: room3
+  m_Name: room4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1843,7 +1843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1546489193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2713,7 +2713,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2084775830
 MonoBehaviour:
   m_ObjectHideFlags: 0

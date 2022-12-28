@@ -28,6 +28,16 @@ public class SceneScript : MonoBehaviour
             case "room3":
                 SceneManager.LoadScene("Room3");
                 break;
+            case "room4":
+                SceneManager.LoadScene("Room4");
+                break;
+            case "room4.2":
+                SceneManager.LoadScene("R4 part 2");
+                break;
+            
+            default:
+                SceneManager.LoadScene("Main Menu");
+                break;
         }
         
     }
