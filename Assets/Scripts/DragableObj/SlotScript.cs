@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace DragableObj
 {
@@ -15,6 +16,7 @@ namespace DragableObj
    
       [Header("Counter scene")]
       [SerializeField] public GameObject nextGameDialogBox;
+      [SerializeField] public Counter gameCounter;
       
       [Header("Status")]
       [SerializeField] private GameObject wrongItemGet;
@@ -28,8 +30,9 @@ namespace DragableObj
       [SerializeField] private GameObject hideObj1;
       [SerializeField] private GameObject hideObj2;
 
+      [FormerlySerializedAs("slotID")]
       [Header("Slot attribute")] 
-      [SerializeField] private string slotID;
+      [SerializeField] private string slotType;
       
       private WaitForSeconds _waitForSeconds;
 
@@ -39,11 +42,32 @@ namespace DragableObj
          if (eventData.pointerDrag != null)
          {
             int id = eventData.pointerDrag.GetComponent<DragAndDrop>().id;
+            string type = eventData.pointerDrag.GetComponent<DragAndDrop>().type;
             Vector2 outSidePosition = new Vector2(10000, 10000);
 
-            if (slotID != null)
+            if (type == "S" || type == "T")
             {
-               if (slotID == "false")
+               if (type == slotType)
+               {
+                  //Send to Hide and Show status 
+                  //When True
+                  OnDropAction(6, outSidePosition, eventData);
+                  gameCounter.CorrectAnswer();
+               }
+               else
+               {
+                  //When False
+                  //Send to Hide and Show status
+                  OnDropAction(999, outSidePosition, eventData);
+                  gameCounter.WrongAnswer();
+               }
+               return;
+            }
+            
+            
+            if (slotType != "except")
+            {
+               if (slotType == "false")
                {
                   StartCoroutine(Wait(3));
                }
@@ -56,30 +80,40 @@ namespace DragableObj
             
             //OnDrop to skip scene
             if (id < 0){
-               switch (id)
-               {
-                  //Swap from scene 4 part 2 to 3
-                  case -1:
-                     SceneManager.LoadScene("R4 part 3");
-                     break;
-                  
-                  //Swap from scene 4 part 3 to 4
-                  case -2:
-                     SceneManager.LoadScene("R4 part 4");
-                     break;
-                  
-                  //Swap from scene 4 part 4 to 5
-                  case -3:
-                     SceneManager.LoadScene("R4 part 5");
-                     break;
-               }
-               
+               OndropSkipScene(id);
             }
-            
             //OnDrop action case
             else
-            {
-                  switch (id) {
+            {  
+               OnDropAction(id, outSidePosition, eventData);
+            }
+         }
+      }
+
+      private void OndropSkipScene(int id)
+      {
+         switch (id)
+         {
+            //Swap from scene 4 part 2 to 3
+            case -1:
+               SceneManager.LoadScene("R4 part 3");
+               break;
+                  
+            //Swap from scene 4 part 3 to 4
+            case -2:
+               SceneManager.LoadScene("R4 part 4");
+               break;
+                  
+            //Swap from scene 4 part 4 to 5
+            case -3:
+               SceneManager.LoadScene("R4 part 5");
+               break;
+         }
+      }
+      
+      private void OnDropAction(int id, Vector2 outSidePosition, PointerEventData eventData)
+      {
+         switch (id) {
                      //Show more object ondrop
                   case 0:
                      eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = outSidePosition;
@@ -132,14 +166,17 @@ namespace DragableObj
                      objectToShow.SetActive(true);
                      break;
                   
-                  //Default return to main
+                  //Get out from there
+                  case 6:
+                     eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = outSidePosition;
+                     break;
+
+                     //Default return to main
                   default:
                      Debug.Log("False!!");
                      eventData.pointerDrag.GetComponent<DragAndDrop>().ResetPosition();
                      break;
                }
-            }
-         }
       }
    
       // ReSharper disable Unity.PerformanceAnalysis

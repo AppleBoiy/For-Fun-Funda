@@ -9,6 +9,7 @@ namespace DragableObj
         public Canvas canvas;
         private CanvasGroup _canvasGroup;
         public int id;
+        public string type;
         public Vector2 initPos;
     
         private void Start()
