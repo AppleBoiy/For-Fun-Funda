@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: bcd8c4841af44490f91ab1da3c784e32
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - MN Wunsen
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a6c335bb8a366425db750055bf66514a, type: 3}
+  - {fileID: 12800000, guid: 5136bf26bbeac40c595036b4a3b1b196, type: 3}
+  - {fileID: 12800000, guid: 38e6b16f2fc8d4523aaa988cf5e50f42, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
