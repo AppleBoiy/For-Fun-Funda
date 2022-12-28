@@ -51,8 +51,9 @@ namespace DragableObj
                {
                   //Send to Hide and Show status 
                   //When True
-                  OnDropAction(6, outSidePosition, eventData);
+                  OnDropAction(1, outSidePosition, eventData);
                   gameCounter.CorrectAnswer();
+                  Debug.Log("Correct!");
                }
                else
                {
