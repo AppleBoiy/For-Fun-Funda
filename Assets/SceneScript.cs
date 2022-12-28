@@ -16,11 +16,17 @@ public class SceneScript : MonoBehaviour
             case "NEXT BTN":
                 SceneManager.LoadScene("Level2");
                 break;
+            case "tempScene":
+                SceneManager.LoadScene("LiquidScene");
+                break;
             case "StartLab":
                 SceneManager.LoadScene("Room1");
                 break;
             case "room2":
                 SceneManager.LoadScene("Room2");
+                break;
+            case "room3":
+                SceneManager.LoadScene("Room3");
                 break;
         }
         
