@@ -32,4 +32,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LiquidScene.unity
     guid: 7a0068539e12d4edcbbc3de51079f1c0
+  - enabled: 1
+    path: Assets/Scenes/Level2 Scene/R4 part 3.unity
+    guid: 22f11a0a3005f4ddc80fac2a39f353d7
+  - enabled: 1
+    path: Assets/Scenes/Level2 Scene/R4 part 4.unity
+    guid: b141da7bdcc194636823ab9d759ab1e4
+  - enabled: 1
+    path: Assets/Scenes/Level2 Scene/R4 part 5.unity
+    guid: 5f95f1483a191424a9cc4445afa6dcff
   m_configObjects: {}
