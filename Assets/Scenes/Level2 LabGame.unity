@@ -1873,13 +1873,14 @@ MonoBehaviour:
   gameCounter: {fileID: 0}
   wrongItemGet: {fileID: 1400151498}
   correctItemGet: {fileID: 1926545145}
-  showObj1: {fileID: 0}
-  showObj2: {fileID: 0}
   objectToShow: {fileID: 0}
   objectToHide: {fileID: 0}
+  showObj1: {fileID: 0}
+  showObj2: {fileID: 0}
   hideObj1: {fileID: 0}
   hideObj2: {fileID: 0}
-  slotType: except
+  slotType: kit
+  trashWithAttribute: 0
 --- !u!222 &1329260254
 CanvasRenderer:
   m_ObjectHideFlags: 0

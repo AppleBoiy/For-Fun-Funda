@@ -8,9 +8,11 @@ namespace DraggableObj
         private RectTransform _rectTransform;
         public Canvas canvas;
         private CanvasGroup _canvasGroup;
+        public Vector2 initPos;
+        
         public int id;
         public string type;
-        public Vector2 initPos;
+        public string room;
     
         private void Start()
         {

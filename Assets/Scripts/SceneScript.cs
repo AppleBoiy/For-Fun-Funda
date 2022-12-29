@@ -42,6 +42,14 @@ public class SceneScript : MonoBehaviour
                 SceneManager.LoadScene("Main Menu");
                 break;
             
+            case "CatheterScene":
+                SceneManager.LoadScene("CatheterScene");
+                break;
+            
+            case "Tourniquet-Step2":
+                SceneManager.LoadScene("Tourniquet-Step2");
+                break;
+            
             default:
                 SceneManager.LoadScene("Main Menu");
                 break;

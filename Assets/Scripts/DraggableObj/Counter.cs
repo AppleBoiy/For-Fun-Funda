@@ -5,19 +5,30 @@ namespace DraggableObj
 {
     public class Counter : MonoBehaviour
     {
+        #region Counter Atrributes
         private int _counter;
 
         [Header("Count to finish")] 
-        [SerializeField] private int totalCount;
+        [SerializeField] public int totalCount;
 
         [Header("Show when finish")] 
         [SerializeField] private GameObject showWhenFinish;
+        
+        [Header("Deactivate when finish")]
+        [SerializeField] private bool deactivateWhenCount;
+        [SerializeField] private GameObject deactivateObject;
 
         [Header("Answer status box")] 
         [SerializeField] private bool showAnswerStatus = true;
         [SerializeField] private GameObject correctFrame;
         [SerializeField] private GameObject wrongFrame;
 
+        [Header("Scene score")] 
+        [SerializeField] private int totalSceneScore;
+        private int _sceneScore;
+        
+        #endregion
+        
         public void WrongAnswer()
         {
             if (showAnswerStatus)
@@ -35,11 +46,27 @@ namespace DraggableObj
             }
             if (_counter >= totalCount)
             {
+                if (deactivateWhenCount)
+                    deactivateObject.SetActive(false);
+                
                 showWhenFinish.SetActive(true);
             }
             Debug.Log(_counter);
         }
 
+        public void UpdateSceneScore()
+        {
+            _sceneScore++;
+            Debug.Log(_sceneScore);
+            Debug.Log(totalSceneScore);
+            if (_sceneScore >= totalSceneScore)
+            {
+                if (deactivateWhenCount)
+                    deactivateObject.SetActive(false);
+                
+                showWhenFinish.SetActive(true);
+            }
+        }
         private IEnumerator ShowStatus(bool status)
         {
             if (status)

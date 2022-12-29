@@ -50,4 +50,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level2 Scene/PrepareSetRoom/CleanSet.unity
     guid: 7103be56a3bbe4373b1448e920f85bed
+  - enabled: 1
+    path: Assets/Scenes/Level2 Scene/TourniquetRoom/CatheterScene.unity
+    guid: 0d65a36d56dc346798a5e7354c6d49aa
+  - enabled: 1
+    path: Assets/Scenes/Level2 Scene/TourniquetRoom/Tourniquet-Step2.unity
+    guid: f0bdda8ff51dc4ef7b1ee1591a72ca2e
   m_configObjects: {}

@@ -8,21 +8,27 @@ namespace DraggableObj
 {
    public class SlotScript : MonoBehaviour, IDropHandler
    {
-   
+
+      #region Get Attribute Field 
+
+      //Collect item
       [Header("Score Collect item scene")]
       [SerializeField] private int collectCount;
       private int _totalCount;
       private int _totalScore;
    
+      //Scene when finish
       [Header("Counter scene")]
       [SerializeField] public GameObject nextGameDialogBox;
       [SerializeField] public Counter gameCounter;
+      [SerializeField] public bool addScoreCounter;
       
+      //Collect status
       [Header("Status")]
       [SerializeField] private GameObject wrongItemGet;
       [SerializeField] private GameObject correctItemGet;
-
-      #region Show and hide
+      
+      //Hide and show object
       [Header("Object to show and hide")]
       [SerializeField] private GameObject objectToShow;
       [SerializeField] private GameObject objectToHide;
@@ -30,69 +36,133 @@ namespace DraggableObj
       [SerializeField] private GameObject showObj2;
       [SerializeField] private GameObject hideObj1;
       [SerializeField] private GameObject hideObj2;
-      #endregion
-
-      #region Slot
+      
+      //Get item type
       [FormerlySerializedAs("slotID")]
       [Header("Slot attribute")] 
       [SerializeField] private string slotType;
       [SerializeField] private bool trashWithAttribute;
+
+      //Game score
+      [Header("Game score")] 
+      [SerializeField] private Counter sceneCounter;
+      
       #endregion
       
       private WaitForSeconds _waitForSeconds;
 
+      
       public void OnDrop(PointerEventData eventData)
       {
          Debug.Log("OnDrop");
-         if (eventData.pointerDrag != null)
+         if (eventData.pointerDrag == null) return;
+
+         #region dragged object info
+            
+         DragAndDrop dragObject = eventData.pointerDrag.GetComponent<DragAndDrop>();
+         int dragObjectID = dragObject.id;
+         string dragObjectType = dragObject.type;
+         string dragObjectRoom = dragObject.room;
+         Vector2 outSidePosition = new Vector2(10000, 10000);
+            
+         #endregion
+
+         #region Trash slot
+         if (dragObjectType == "S" || dragObjectType == "T")
          {
             
-            int id = eventData.pointerDrag.GetComponent<DragAndDrop>().id;
-            string type = eventData.pointerDrag.GetComponent<DragAndDrop>().type;
-            Vector2 outSidePosition = new Vector2(10000, 10000);
-
-            #region Trash slot
-            if (type == "S" || type == "T")
+            Debug.Log("Trash can");
+            if (dragObjectType == slotType)
             {
-               if (type == slotType)
+               //Send to Hide and Show status 
+               //When True
+               if (trashWithAttribute)
                {
-                  //Send to Hide and Show status 
-                  //When True
-                  if (trashWithAttribute)
-                     OndropMoreAction(0, outSidePosition, eventData);
-                  else
-                     OnDropAction(1, outSidePosition, eventData);
-                  gameCounter.CorrectAnswer();
-                  Debug.Log("Correct!");
+                  Debug.Log("Trash with attribute");
+                  OndropMoreAction(0, outSidePosition, eventData);
                }
                else
                {
-                  //When False
-                  //Send to Hide and Show status
-                  OnDropAction(999, outSidePosition, eventData);
-                  gameCounter.WrongAnswer();
+                  Debug.Log($"Trash without attribute");
+                  OnDropAction(1, outSidePosition, eventData);
                }
-               return;
+                  
+               
+               gameCounter.CorrectAnswer();
+               Debug.Log("Correct!");
             }
-            #endregion
-
-            #region Check only true false
-            if (slotType != "except")
+            else
             {
-               if (slotType == "false")
-               {
-                  StartCoroutine(Wait(3));
-               }
-               else
-               {
-                  StartCoroutine(Wait(2));
-               }
+               //When False
+               //Send to Hide and Show status
+               OnDropAction(3, outSidePosition, eventData);
+               gameCounter.WrongAnswer();
             }
-            #endregion
-            
-            //When slot isn't trash can
-            OndropMoreAction(id, outSidePosition, eventData);
+            return;
          }
+         #endregion
+
+         #region Catheter room
+
+         if (dragObjectRoom == "CatheterScene")
+         {
+               
+            //Catheter
+            switch (dragObjectType)
+            {
+               case "catheter":
+                  OnDropAction(slotType == $"trueVein" ? 1 : 3, outSidePosition, eventData);
+                  break;
+               
+               case "finger":
+                  Debug.Log("Get finger");
+                  sceneCounter.UpdateSceneScore();
+                  OnDropAction(8, outSidePosition, eventData);
+                  break;
+               
+               case "set":
+                  Debug.Log("Get set");
+                  OnDropAction(slotType == $"set" ? 8 : 3, outSidePosition, eventData);
+                  if (slotType == "set")
+                     OnDropAction(9, outSidePosition, eventData);
+                  break;
+               
+               case "Transpore":
+                  Debug.Log("Get Transpore");
+                  OnDropAction(slotType == $"Transpore" ? 4 : 3, outSidePosition, eventData);
+                  if (slotType == "Transpore")
+                     OnDropAction(9, outSidePosition, eventData);
+                  break;
+               
+               case "Tegadrem":
+                  Debug.Log("Get Tegadrem");
+                  OnDropAction(slotType == $"Tegadrem" ? 8 : 3, outSidePosition, eventData);
+                  if (slotType == "Tegadrem")
+                     OnDropAction(9, outSidePosition, eventData);
+                  break;
+            }
+            return;
+         }
+
+         #endregion
+
+         #region Check only true false
+         if (slotType == "except")
+         {
+            if (slotType == "false")
+            {
+               StartCoroutine(Wait(3));
+            }
+            else
+            {
+               StartCoroutine(Wait(2));
+            }
+            return;
+         }
+         #endregion
+            
+         //Any-else slot
+         OndropMoreAction(dragObjectID, outSidePosition, eventData);
       }
 
       #region Ondrop action by item id
@@ -134,7 +204,6 @@ namespace DraggableObj
       #endregion
 
       #region Ondrop and then do something function
-      
       private void OnDropAction(int id, Vector2 outSidePosition, PointerEventData eventData)
       {
          switch (id)
@@ -209,6 +278,22 @@ namespace DraggableObj
                showObj2.SetActive(true);
                break;
             
+            //Just get it
+            case 8:
+               Debug.Log("case 8");
+               eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition =
+                  GetComponent<RectTransform>().anchoredPosition;
+               break;
+            
+            //Get only score
+            case 9:
+               _totalCount++;
+               if (_totalCount >= collectCount)
+               {
+                  gameCounter.CorrectAnswer();
+               }
+               break;
+            
             //Default reset position
             default:
                Debug.Log("False!!");
@@ -217,7 +302,8 @@ namespace DraggableObj
          }
       }
       #endregion
-   
+      
+      #region Wait for a sec 
       // ReSharper disable Unity.PerformanceAnalysis
       private IEnumerator Wait(int id)
       {
@@ -236,7 +322,8 @@ namespace DraggableObj
                break;
          }
       }
-
+      #endregion
+      
       public void OnDrop(PointerEventData eventData, out Vector2 anchoredPos)
       {
          throw new System.NotImplementedException();

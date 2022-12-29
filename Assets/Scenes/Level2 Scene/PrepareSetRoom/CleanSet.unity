@@ -220,9 +220,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1924126841}
+  initPos: {x: 0, y: 0}
   id: 7
   type: T
-  initPos: {x: 0, y: 0}
+  room: 
 --- !u!114 &176527135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,6 +424,7 @@ MonoBehaviour:
   collectCount: 1
   nextGameDialogBox: {fileID: 0}
   gameCounter: {fileID: 1921531385}
+  addScoreCounter: 0
   wrongItemGet: {fileID: 0}
   correctItemGet: {fileID: 0}
   objectToShow: {fileID: 0}
@@ -433,6 +435,7 @@ MonoBehaviour:
   hideObj2: {fileID: 0}
   slotType: S
   trashWithAttribute: 0
+  sceneCounter: {fileID: 0}
 --- !u!222 &216900010
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -455,7 +458,7 @@ GameObject:
   - component: {fileID: 262065101}
   - component: {fileID: 262065100}
   m_Layer: 5
-  m_Name: room4.2
+  m_Name: room2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1140,6 +1143,7 @@ MonoBehaviour:
   collectCount: 2
   nextGameDialogBox: {fileID: 0}
   gameCounter: {fileID: 1921531385}
+  addScoreCounter: 0
   wrongItemGet: {fileID: 0}
   correctItemGet: {fileID: 0}
   objectToShow: {fileID: 0}
@@ -1150,6 +1154,7 @@ MonoBehaviour:
   hideObj2: {fileID: 0}
   slotType: T
   trashWithAttribute: 1
+  sceneCounter: {fileID: 0}
 --- !u!222 &492902010
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1403,6 +1408,7 @@ MonoBehaviour:
   collectCount: 2
   nextGameDialogBox: {fileID: 0}
   gameCounter: {fileID: 1921531385}
+  addScoreCounter: 0
   wrongItemGet: {fileID: 0}
   correctItemGet: {fileID: 0}
   objectToShow: {fileID: 659844120}
@@ -1413,6 +1419,7 @@ MonoBehaviour:
   hideObj2: {fileID: 0}
   slotType: T
   trashWithAttribute: 0
+  sceneCounter: {fileID: 0}
 --- !u!222 &659844123
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1584,6 +1591,7 @@ MonoBehaviour:
   collectCount: 1
   nextGameDialogBox: {fileID: 0}
   gameCounter: {fileID: 0}
+  addScoreCounter: 0
   wrongItemGet: {fileID: 0}
   correctItemGet: {fileID: 0}
   objectToShow: {fileID: 0}
@@ -1594,6 +1602,7 @@ MonoBehaviour:
   hideObj2: {fileID: 0}
   slotType: 
   trashWithAttribute: 0
+  sceneCounter: {fileID: 0}
 --- !u!222 &974898255
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2006,9 +2015,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1924126841}
+  initPos: {x: 0, y: 0}
   id: 1
   type: T
-  initPos: {x: 0, y: 0}
+  room: 
 --- !u!114 &1263681078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2486,9 +2496,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1924126841}
+  initPos: {x: 0, y: 0}
   id: 7
   type: T
-  initPos: {x: 0, y: 0}
+  room: 
 --- !u!114 &1800166046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2558,9 +2569,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalCount: 3
   showWhenFinish: {fileID: 262065098}
+  deactivateWhenCount: 0
+  deactivateObject: {fileID: 0}
   showAnswerStatus: 1
   correctFrame: {fileID: 1947452297}
   wrongFrame: {fileID: 808405260}
+  totalSceneScore: 0
 --- !u!4 &1921531386
 Transform:
   m_ObjectHideFlags: 0
