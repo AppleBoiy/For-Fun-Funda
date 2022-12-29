@@ -34,6 +34,7 @@ namespace DraggableObj
         {
             Debug.Log("EndDrag");
             _canvasGroup.blocksRaycasts = true;
+            
         }
 
         public void OnDrag(PointerEventData eventData)

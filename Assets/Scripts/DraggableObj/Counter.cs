@@ -14,18 +14,25 @@ namespace DraggableObj
         [SerializeField] private GameObject showWhenFinish;
 
         [Header("Answer status box")] 
+        [SerializeField] private bool showAnswerStatus = true;
         [SerializeField] private GameObject correctFrame;
         [SerializeField] private GameObject wrongFrame;
 
         public void WrongAnswer()
         {
-            StartCoroutine(ShowStatus(false));
+            if (showAnswerStatus)
+            {
+                StartCoroutine(ShowStatus(false));
+            }
         }
 
         public void CorrectAnswer()
         {
             _counter++;
-            StartCoroutine(ShowStatus(true));
+            if (showAnswerStatus)
+            {
+                StartCoroutine(ShowStatus(true));    
+            }
             if (_counter >= totalCount)
             {
                 showWhenFinish.SetActive(true);
