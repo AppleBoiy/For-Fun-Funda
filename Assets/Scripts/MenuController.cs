@@ -7,89 +7,13 @@ using TMPro;
 
 public class MenuController : MonoBehaviour
 {
+
+    #region Volume Setting
     [Header("Volume Setting")]
-    [SerializeField] private TMP_Text volumeTextValue = null;
-    [SerializeField] private Slider volumeSlider = null;
+    [SerializeField] private TMP_Text volumeTextValue;
+    [SerializeField] private Slider volumeSlider;
     [SerializeField] private float defaultVolume = 25.0f;
-
-    [Header("Gameplay Setting")]
-    [SerializeField] private TMP_Text controllerSenTextValue = null;
-    [SerializeField] private Slider controllerSenSlider = null;
-    [SerializeField] private int defaultSen = 4;
-    public int mainControllerSen = 4;
     
-    [Header("Toggle Setting")]
-    [SerializeField] private Toggle invertYToggle = null;
-
-    [Header("Graphics Setting")] 
-    [SerializeField] private Slider brightnessSlider = null;
-    [SerializeField] private TMP_Text brightnessTextValue = null;
-    [SerializeField] private float defaultBrightness = 1.0f;
-
-    [Space(10)] 
-    [SerializeField] private TMP_Dropdown qualityDropdown;
-    [SerializeField] private Toggle fullScreenToggle;
-    
-    private int _qualityLevel;
-    private bool _isFullScreen;
-    private float _brightnessLevel;
-
-    [Header("Confirmation")]
-    [SerializeField] private GameObject confirmationPrompt = null;
-
-    [Header("Levels To Load")]
-    private string _levelToLoad;
-    [SerializeField] private GameObject noSavedGameDialog = null;
-
-    [Header("Resolution Dropdowns")] 
-    public TMP_Dropdown resolutionDropdown;
-    private Resolution[] _resolutions;
-
-    private void Start()
-    {
-        _resolutions = Screen.resolutions;
-        resolutionDropdown.ClearOptions();
-
-        List<string> options = new List<string>();
-        
-        int currentResolutionIndex = 0;
-        
-        for (int i = 0; i < _resolutions.Length; i++)
-        {
-            string option = _resolutions[i].width + "x" + _resolutions[i].height;
-            options.Add(option);
-
-            if (_resolutions[i].width == Screen.width && _resolutions[i].height == Screen.height)
-            {
-                currentResolutionIndex = i;
-            }
-        } 
-    }
-
-    public void SetResolution(int resolutionIndex)
-    {
-        Resolution resolution = _resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-    }
-
-    public void LoadGameDialogYes()
-    {
-        if (PlayerPrefs.HasKey("SavedLevel"))
-        {
-            _levelToLoad = PlayerPrefs.GetString("SavedLevel");
-            SceneManager.LoadScene(_levelToLoad);
-        }
-        else
-        {
-            noSavedGameDialog.SetActive(true);
-        }
-    }
-
-    public void ExitButton()
-    {
-        Application.Quit();
-    }
-
     public void SetVolume(float volume)
     {
         AudioListener.volume = volume;
@@ -101,6 +25,15 @@ public class MenuController : MonoBehaviour
         PlayerPrefs.SetFloat("masterVolume", AudioListener.volume);
         StartCoroutine(ConfirmationBox());
     }
+
+    #endregion
+
+    #region Gameplay Setting
+    [Header("Gameplay Setting")]
+    [SerializeField] private TMP_Text controllerSenTextValue;
+    [SerializeField] private Slider controllerSenSlider;
+    [SerializeField] private int defaultSen = 4;
+    public int mainControllerSen = 4;
 
     public void SetControllerSen(float sensitivity)
     {
@@ -116,6 +49,36 @@ public class MenuController : MonoBehaviour
         // Not Invert
         PlayerPrefs.SetFloat("masterSen", mainControllerSen);
         StartCoroutine(ConfirmationBox());
+    }
+    #endregion
+
+    
+    [Header("Toggle Setting")]
+    [SerializeField] private Toggle invertYToggle;
+
+    #region Graphics Setting
+    
+    [Header("Graphics Setting")] 
+    [SerializeField] private Slider brightnessSlider;
+    [SerializeField] private TMP_Text brightnessTextValue;
+    [SerializeField] private float defaultBrightness = 1.0f;
+
+    [Space(10)] 
+    [SerializeField] private TMP_Dropdown qualityDropdown;
+    [SerializeField] private Toggle fullScreenToggle;
+    
+    private int _qualityLevel;
+    private bool _isFullScreen;
+    private float _brightnessLevel;
+
+    [Header("Resolution Dropdowns")] 
+    public TMP_Dropdown resolutionDropdown;
+    private Resolution[] _resolutions;
+
+    public void SetResolution(int resolutionIndex)
+    {
+        Resolution resolution = _resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
     public void SetBrightness(float brightness)
@@ -148,7 +111,56 @@ public class MenuController : MonoBehaviour
 
         StartCoroutine(ConfirmationBox());
     }
-    
+
+    #endregion
+
+    [Header("Confirmation")]
+    [SerializeField] private GameObject confirmationPrompt;
+
+    [Header("Levels To Load")]
+    private string _levelToLoad;
+    [SerializeField] private GameObject noSavedGameDialog;
+
+    private void Start()
+    {
+        _resolutions = Screen.resolutions;
+        resolutionDropdown.ClearOptions();
+
+        List<string> options = new List<string>();
+        
+        int currentResolutionIndex = 0;
+        
+        for (int i = 0; i < _resolutions.Length; i++)
+        {
+            string option = _resolutions[i].width + "x" + _resolutions[i].height;
+            options.Add(option);
+
+            if (_resolutions[i].width == Screen.width && _resolutions[i].height == Screen.height)
+            {
+                currentResolutionIndex = i;
+            }
+        } 
+    }
+
+    public void LoadGameDialogYes()
+    {
+        if (PlayerPrefs.HasKey("SavedLevel"))
+        {
+            _levelToLoad = PlayerPrefs.GetString("SavedLevel");
+            SceneManager.LoadScene(_levelToLoad);
+        }
+        else
+        {
+            noSavedGameDialog.SetActive(true);
+        }
+    }
+
+    public void ExitButton()
+    {
+        Application.Quit();
+    }
+
+    #region Reset setting BTN
     public void ResetButton(string menuType)
     {
         if (menuType == "Graphics")
@@ -187,14 +199,13 @@ public class MenuController : MonoBehaviour
         }
         
     }
+    #endregion
 
     private IEnumerator ConfirmationBox()
     {
         confirmationPrompt.SetActive(true);
         yield return new WaitForSeconds(2);
         confirmationPrompt.SetActive(false);
-
-
     }
 
 }

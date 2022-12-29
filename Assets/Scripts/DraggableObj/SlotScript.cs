@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -21,21 +22,23 @@ namespace DraggableObj
       [Header("Status")]
       [SerializeField] private GameObject wrongItemGet;
       [SerializeField] private GameObject correctItemGet;
-      
+
+      #region Show and hide
       [Header("Object to show and hide")]
-      [SerializeField] private GameObject showObj1;
-      [SerializeField] private GameObject showObj2;
       [SerializeField] private GameObject objectToShow;
       [SerializeField] private GameObject objectToHide;
+      [SerializeField] private GameObject showObj1;
+      [SerializeField] private GameObject showObj2;
       [SerializeField] private GameObject hideObj1;
       [SerializeField] private GameObject hideObj2;
+      #endregion
 
       [FormerlySerializedAs("slotID")]
       [Header("Slot attribute")] 
       [SerializeField] private string slotType;
       
       private WaitForSeconds _waitForSeconds;
-
+      
       public void OnDrop(PointerEventData eventData)
       {
          Debug.Log("OnDrop");
@@ -45,6 +48,7 @@ namespace DraggableObj
             string type = eventData.pointerDrag.GetComponent<DragAndDrop>().type;
             Vector2 outSidePosition = new Vector2(10000, 10000);
 
+            #region Trash slot
             if (type == "S" || type == "T")
             {
                if (type == slotType)
@@ -64,8 +68,9 @@ namespace DraggableObj
                }
                return;
             }
-            
-            
+            #endregion
+
+            #region Check only true false
             if (slotType != "except")
             {
                if (slotType == "false")
@@ -77,7 +82,7 @@ namespace DraggableObj
                   StartCoroutine(Wait(2));
                }
             }
-            
+            #endregion
             
             //OnDrop to skip scene
             if (id < 0){
