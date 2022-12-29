@@ -265,6 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 3
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!222 &190602512
 CanvasRenderer:
@@ -464,6 +465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 2
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!222 &333994368
 CanvasRenderer:
@@ -539,6 +541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 3
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!222 &336942072
 CanvasRenderer:
@@ -690,6 +693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 2
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!114 &375001010
 MonoBehaviour:
@@ -1575,6 +1579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 3
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!222 &1159247610
 CanvasRenderer:
@@ -1802,6 +1807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 2
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!222 &1252335532
 CanvasRenderer:
@@ -1864,6 +1870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectCount: 9
   nextGameDialogBox: {fileID: 1783176021}
+  gameCounter: {fileID: 0}
   wrongItemGet: {fileID: 1400151498}
   correctItemGet: {fileID: 1926545145}
   showObj1: {fileID: 0}
@@ -1872,7 +1879,7 @@ MonoBehaviour:
   objectToHide: {fileID: 0}
   hideObj1: {fileID: 0}
   hideObj2: {fileID: 0}
-  slotID: except
+  slotType: except
 --- !u!222 &1329260254
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1947,6 +1954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 3
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!222 &1339572934
 CanvasRenderer:
@@ -2166,6 +2174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 2
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!222 &1372437487
 CanvasRenderer:
@@ -2241,6 +2250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 2
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!222 &1380098276
 CanvasRenderer:
@@ -2316,6 +2326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 2
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!114 &1388741667
 MonoBehaviour:
@@ -2573,6 +2584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 2
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!222 &1528112502
 CanvasRenderer:
@@ -2724,6 +2736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 3
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!222 &1597835206
 CanvasRenderer:
@@ -2951,6 +2964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 2
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!222 &1695790783
 CanvasRenderer:
@@ -3026,6 +3040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 3
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!222 &1750304718
 CanvasRenderer:
@@ -3432,6 +3447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 3
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!222 &1890712758
 CanvasRenderer:
@@ -3583,6 +3599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 3
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!114 &1960842953
 MonoBehaviour:
@@ -3688,6 +3705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 2
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!222 &1989065940
 CanvasRenderer:
@@ -3763,6 +3781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   id: 3
+  type: 
   initPos: {x: 0, y: 0}
 --- !u!222 &2041602057
 CanvasRenderer:

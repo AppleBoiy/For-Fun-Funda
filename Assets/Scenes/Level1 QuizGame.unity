@@ -1715,7 +1715,7 @@ MonoBehaviour:
     questionInfoTextObject: {fileID: 2052730184}
     scoreText: {fileID: 321421616}
     resolutionScreenAnimator: {fileID: 1874400495}
-    resolutionBG: {fileID: 1874400492}
+    resolutionBg: {fileID: 1874400492}
     resolutionStateInfoText: {fileID: 190196031}
     resolutionScoreText: {fileID: 1354563566}
     highScoreText: {fileID: 1068334512}
@@ -1723,9 +1723,9 @@ MonoBehaviour:
     finishUIElements: {fileID: 383148144}
   parameters:
     margins: 15
-    correctBGColor: {r: 0.18431373, g: 0.76470596, b: 0.14901961, a: 1}
-    incorrectBGColor: {r: 0.76470596, g: 0.15686275, b: 0.14901961, a: 1}
-    finalBGColor: {r: 0.14901961, g: 0.5058824, b: 0.76470596, a: 1}
+    correctBgColor: {r: 0.18431373, g: 0.76470596, b: 0.14901961, a: 1}
+    incorrectBgColor: {r: 0.76470596, g: 0.15686275, b: 0.14901961, a: 1}
+    finalBgColor: {r: 0.14901961, g: 0.5058824, b: 0.76470596, a: 1}
 --- !u!114 &849180835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2250,31 +2250,31 @@ MonoBehaviour:
   - name: CorrectSFX
     clip: {fileID: 8300000, guid: 4e7d2ed2bd3ce174aa8495737ade87dc, type: 3}
     parameters:
-      Volume: 0.4
-      Pitch: 1
-      Loop: 0
-    Source: {fileID: 0}
+      volume: 0.4
+      pitch: 1
+      loop: 0
+    source: {fileID: 0}
   - name: IncorrectSFX
     clip: {fileID: 8300000, guid: b2cde81c1526d304786f03e9cedb4604, type: 3}
     parameters:
-      Volume: 0.4
-      Pitch: 1
-      Loop: 0
-    Source: {fileID: 0}
+      volume: 0.4
+      pitch: 1
+      loop: 0
+    source: {fileID: 0}
   - name: CountdownSFX
     clip: {fileID: 8300000, guid: 20f8537e455b1a945a15ba1a454c7517, type: 3}
     parameters:
-      Volume: 0.4
-      Pitch: 0.85
-      Loop: 0
-    Source: {fileID: 0}
+      volume: 0.4
+      pitch: 0.85
+      loop: 0
+    source: {fileID: 0}
   - name: GameMusic
     clip: {fileID: 8300000, guid: 5c2d1fcea55170649a5e1b77c5181d67, type: 3}
     parameters:
-      Volume: 0.2
-      Pitch: 1
-      Loop: 1
-    Source: {fileID: 0}
+      volume: 0.2
+      pitch: 1
+      loop: 1
+    source: {fileID: 0}
   sourcePrefab: {fileID: 82509203759054478, guid: 0b2c85631b731e34faec7b3adb879f79, type: 3}
   startupTrack: GameMusic
 --- !u!1 &1354563564

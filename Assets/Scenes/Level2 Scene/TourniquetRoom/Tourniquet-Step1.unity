@@ -712,16 +712,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectCount: 1
-  nextGameDialogBox: {fileID: 549278467}
+  nextGameDialogBox: {fileID: 0}
   gameCounter: {fileID: 304249109}
-  wrongItemGet: {fileID: 1585900234}
-  correctItemGet: {fileID: 1443555711}
+  wrongItemGet: {fileID: 0}
+  correctItemGet: {fileID: 0}
   showObj1: {fileID: 0}
   showObj2: {fileID: 0}
-  objectToShow: {fileID: 549278467}
-  objectToHide: {fileID: 0}
+  objectToShow: {fileID: 379987500}
+  objectToHide: {fileID: 1585900234}
   hideObj1: {fileID: 0}
-  hideObj2: {fileID: 1344387776}
+  hideObj2: {fileID: 0}
   slotType: T
 --- !u!222 &379987503
 CanvasRenderer:

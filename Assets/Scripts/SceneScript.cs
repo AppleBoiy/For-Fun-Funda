@@ -8,31 +8,38 @@ public class SceneScript : MonoBehaviour
         switch(gameObject.name)
         {
             case "start":
-                SceneManager.LoadScene("Game");
+                SceneManager.LoadScene("Level1 QuizGame");
                 break;
-            case "Main":
-                SceneManager.LoadScene("Main Menu");
-                break;
+            
             case "NEXT BTN":
-                SceneManager.LoadScene("Level2");
+                SceneManager.LoadScene("Level2 LabGame");
                 break;
-            case "tempScene":
-                SceneManager.LoadScene("LiquidScene");
-                break;
+            
             case "StartLab":
-                SceneManager.LoadScene("Room1");
+                SceneManager.LoadScene("CleanSet");
                 break;
+            
             case "room2":
                 SceneManager.LoadScene("Room2");
                 break;
+
             case "room3":
                 SceneManager.LoadScene("Room3");
                 break;
+            
             case "room4":
-                SceneManager.LoadScene("Room4");
+                SceneManager.LoadScene("Tourniquet-Step1");
                 break;
-            case "room4.2":
-                SceneManager.LoadScene("R4 part 2");
+
+
+            //Temp-scene water simulator
+            case "tempScene":
+                SceneManager.LoadScene("LiquidScene");
+                break;
+            
+            //Back to main menu
+            case "Main":
+                SceneManager.LoadScene("Main Menu");
                 break;
             
             default:

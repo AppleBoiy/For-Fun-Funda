@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace DragableObj
+namespace DraggableObj
 {
     public class Counter : MonoBehaviour
     {

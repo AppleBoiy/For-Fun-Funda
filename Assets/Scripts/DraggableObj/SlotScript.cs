@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
-namespace DragableObj
+namespace DraggableObj
 {
    public class SlotScript : MonoBehaviour, IDropHandler
    {
