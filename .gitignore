@@ -75,3 +75,4 @@ crashlytics-build.properties
 .DS_Store
 .idea
 mono_crash.mem.88751.1.blob
+/Assets/.idea/
