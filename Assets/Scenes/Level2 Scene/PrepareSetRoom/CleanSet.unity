@@ -1149,7 +1149,7 @@ MonoBehaviour:
   correctItemGet: {fileID: 0}
   objectToShow: {fileID: 0}
   objectToHide: {fileID: 0}
-  showObj1: {fileID: 1263681074}
+  showObj1: {fileID: 659844120}
   showObj2: {fileID: 659844120}
   hideObj1: {fileID: 0}
   hideObj2: {fileID: 0}
@@ -2355,18 +2355,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495112234}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.99999964, w: -0.0008510919}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1924126840}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -179.902}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -107, y: -145}
-  m_SizeDelta: {x: 525.835, y: 642.21}
+  m_AnchoredPosition: {x: -125, y: -147}
+  m_SizeDelta: {x: 733.286, y: 785.099}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1495112236
 MonoBehaviour:
@@ -2388,7 +2388,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 89b5c3165b8024be1903d7ec29ea6531, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4ecd46818d7914d29b39cc7acb1b502e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

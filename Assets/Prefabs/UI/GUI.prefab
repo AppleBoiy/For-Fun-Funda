@@ -3093,7 +3093,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7044765089290592353}
         m_TargetAssemblyTypeName: ChooseItemBtn, Assembly-CSharp
-        m_MethodName: GetWrongItem
+        m_MethodName: GetItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6038,7 +6038,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7044765089720348437}
         m_TargetAssemblyTypeName: ChooseItemBtn, Assembly-CSharp
-        m_MethodName: GetWrongItem
+        m_MethodName: GetItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7103,7 +7103,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7044765089971032779}
         m_TargetAssemblyTypeName: ChooseItemBtn, Assembly-CSharp
-        m_MethodName: GetWrongItem
+        m_MethodName: GetItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

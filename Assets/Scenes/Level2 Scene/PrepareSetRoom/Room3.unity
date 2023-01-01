@@ -189,9 +189,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1546489195}
+  initPos: {x: 0, y: 0}
   id: 4
   type: 
-  initPos: {x: 0, y: 0}
+  room: 
 --- !u!114 &22298294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,6 +377,111 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27206776}
   m_CullTransparentMesh: 1
+--- !u!1001 &81500333
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7044765089720348436, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GetItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089720348437, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: getCorrectItem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044765089793944888, guid: 36fd41af5978744ca960822fa4098947, type: 3}
+      propertyPath: m_Name
+      value: GUI
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36fd41af5978744ca960822fa4098947, type: 3}
 --- !u!1 &202549154
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,9 +700,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1546489195}
+  initPos: {x: 0, y: 0}
   id: 4
   type: 
-  initPos: {x: 0, y: 0}
+  room: 
 --- !u!114 &325026922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -842,15 +949,18 @@ MonoBehaviour:
   collectCount: 1
   nextGameDialogBox: {fileID: 0}
   gameCounter: {fileID: 0}
+  addScoreCounter: 0
   wrongItemGet: {fileID: 0}
   correctItemGet: {fileID: 0}
-  showObj1: {fileID: 0}
-  showObj2: {fileID: 0}
   objectToShow: {fileID: 1082296315}
   objectToHide: {fileID: 817300742}
+  showObj1: {fileID: 0}
+  showObj2: {fileID: 0}
   hideObj1: {fileID: 0}
   hideObj2: {fileID: 0}
   slotType: 
+  trashWithAttribute: 0
+  sceneCounter: {fileID: 0}
 --- !u!222 &817300745
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1733,15 +1843,18 @@ MonoBehaviour:
   collectCount: 1
   nextGameDialogBox: {fileID: 0}
   gameCounter: {fileID: 0}
+  addScoreCounter: 0
   wrongItemGet: {fileID: 0}
   correctItemGet: {fileID: 0}
-  showObj1: {fileID: 0}
-  showObj2: {fileID: 0}
   objectToShow: {fileID: 0}
   objectToHide: {fileID: 1718759340}
+  showObj1: {fileID: 0}
+  showObj2: {fileID: 0}
   hideObj1: {fileID: 0}
   hideObj2: {fileID: 0}
   slotType: 
+  trashWithAttribute: 0
+  sceneCounter: {fileID: 0}
 --- !u!222 &1447623474
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1937,7 +2050,7 @@ RectTransform:
   - {fileID: 1796117424}
   - {fileID: 22298291}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1958,8 +2071,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalCount: 0
   showWhenFinish: {fileID: 0}
+  deactivateWhenCount: 0
+  deactivateObject: {fileID: 0}
+  showAnswerStatus: 1
   correctFrame: {fileID: 0}
   wrongFrame: {fileID: 0}
+  totalSceneScore: 0
 --- !u!1 &1718759340
 GameObject:
   m_ObjectHideFlags: 0
@@ -2047,15 +2164,18 @@ MonoBehaviour:
   collectCount: 1
   nextGameDialogBox: {fileID: 0}
   gameCounter: {fileID: 0}
+  addScoreCounter: 0
   wrongItemGet: {fileID: 0}
   correctItemGet: {fileID: 0}
-  showObj1: {fileID: 0}
-  showObj2: {fileID: 0}
   objectToShow: {fileID: 0}
   objectToHide: {fileID: 1083983043}
+  showObj1: {fileID: 0}
+  showObj2: {fileID: 0}
   hideObj1: {fileID: 0}
   hideObj2: {fileID: 0}
   slotType: 
+  trashWithAttribute: 0
+  sceneCounter: {fileID: 0}
 --- !u!222 &1796117426
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2235,7 +2355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1804442902
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2254,7 +2374,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -40.802}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 672, y: -289}
+  m_AnchoredPosition: {x: 385, y: -320}
   m_SizeDelta: {x: 397.053, y: 272.188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1804442903
@@ -2282,9 +2402,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2084775832}
+  initPos: {x: 0, y: 0}
   id: 1
   type: 
-  initPos: {x: 0, y: 0}
+  room: 
 --- !u!114 &1804442905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2791,7 +2912,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &2084775833
 RectTransform:
