@@ -323,10 +323,5 @@ namespace DraggableObj
          }
       }
       #endregion
-      
-      public void OnDrop(PointerEventData eventData, out Vector2 anchoredPos)
-      {
-         throw new System.NotImplementedException();
-      }
    }
 }
