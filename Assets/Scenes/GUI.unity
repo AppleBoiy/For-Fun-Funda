@@ -917,7 +917,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2014696414}
+      - m_Target: {fileID: 311787853}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1303,7 +1303,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 181355327}
+      - m_Target: {fileID: 311261207}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2325,7 +2325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &311787854
 Transform:
   m_ObjectHideFlags: 0
@@ -3112,7 +3112,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 577872971}
         m_TargetAssemblyTypeName: ChooseItemBtn, Assembly-CSharp
-        m_MethodName: GetWrongItem
+        m_MethodName: GetItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3172,12 +3172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ba7f242afc040cf922022baa4fbcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrongStatusObj: {fileID: 0}
-  itemDetail: {fileID: 0}
-  getItemStatus: 0
-  showTrashBtn: {fileID: 0}
-  showKitsBtn: {fileID: 0}
-  itemSlot: {fileID: 0}
+  itemDetail: {fileID: 2100522642}
+  getCorrectItem: 0
+  itemSelectController: {fileID: 1323173345}
 --- !u!1 &587284000
 GameObject:
   m_ObjectHideFlags: 0
@@ -3397,7 +3394,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 590564882}
         m_TargetAssemblyTypeName: ChooseItemBtn, Assembly-CSharp
-        m_MethodName: GetWrongItem
+        m_MethodName: GetItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3457,12 +3454,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ba7f242afc040cf922022baa4fbcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrongStatusObj: {fileID: 0}
-  itemDetail: {fileID: 0}
-  getItemStatus: 0
-  showTrashBtn: {fileID: 0}
-  showKitsBtn: {fileID: 0}
-  itemSlot: {fileID: 0}
+  itemDetail: {fileID: 1404888395}
+  getCorrectItem: 0
+  itemSelectController: {fileID: 1323173345}
 --- !u!1 &622623788
 GameObject:
   m_ObjectHideFlags: 0
@@ -4560,7 +4554,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 731055702}
         m_TargetAssemblyTypeName: ChooseItemBtn, Assembly-CSharp
-        m_MethodName: GetWrongItem
+        m_MethodName: GetItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4620,12 +4614,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ba7f242afc040cf922022baa4fbcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrongStatusObj: {fileID: 0}
-  itemDetail: {fileID: 0}
-  getItemStatus: 0
-  showTrashBtn: {fileID: 0}
-  showKitsBtn: {fileID: 0}
-  itemSlot: {fileID: 0}
+  itemDetail: {fileID: 2014696414}
+  getCorrectItem: 0
+  itemSelectController: {fileID: 1323173345}
 --- !u!1 &738091942
 GameObject:
   m_ObjectHideFlags: 0
@@ -4754,12 +4745,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ba7f242afc040cf922022baa4fbcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrongStatusObj: {fileID: 0}
-  itemDetail: {fileID: 0}
-  getItemStatus: 0
-  showTrashBtn: {fileID: 0}
-  showKitsBtn: {fileID: 0}
-  itemSlot: {fileID: 0}
+  itemDetail: {fileID: 311261207}
+  getCorrectItem: 0
+  itemSelectController: {fileID: 1323173345}
 --- !u!114 &739854759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5463,6 +5451,7 @@ RectTransform:
   m_Children:
   - {fileID: 156784251}
   - {fileID: 1058683641}
+  - {fileID: 1323173344}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5734,12 +5723,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ba7f242afc040cf922022baa4fbcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrongStatusObj: {fileID: 0}
-  itemDetail: {fileID: 0}
-  getItemStatus: 0
-  showTrashBtn: {fileID: 0}
-  showKitsBtn: {fileID: 0}
-  itemSlot: {fileID: 0}
+  itemDetail: {fileID: 824041937}
+  getCorrectItem: 0
+  itemSelectController: {fileID: 1323173345}
 --- !u!114 &939443923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5920,7 +5906,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 942741840}
         m_TargetAssemblyTypeName: ChooseItemBtn, Assembly-CSharp
-        m_MethodName: GetWrongItem
+        m_MethodName: GetItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5980,12 +5966,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ba7f242afc040cf922022baa4fbcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrongStatusObj: {fileID: 0}
-  itemDetail: {fileID: 0}
-  getItemStatus: 0
-  showTrashBtn: {fileID: 0}
-  showKitsBtn: {fileID: 0}
-  itemSlot: {fileID: 0}
+  itemDetail: {fileID: 1733060557}
+  getCorrectItem: 0
+  itemSelectController: {fileID: 1323173345}
 --- !u!1 &957769870
 GameObject:
   m_ObjectHideFlags: 0
@@ -7173,12 +7156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ba7f242afc040cf922022baa4fbcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrongStatusObj: {fileID: 0}
-  itemDetail: {fileID: 0}
-  getItemStatus: 0
-  showTrashBtn: {fileID: 0}
-  showKitsBtn: {fileID: 0}
-  itemSlot: {fileID: 0}
+  itemDetail: {fileID: 1790175171}
+  getCorrectItem: 0
+  itemSelectController: {fileID: 1323173345}
 --- !u!114 &1156561677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7788,6 +7768,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273255738}
   m_CullTransparentMesh: 1
+--- !u!1 &1323173343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1323173344}
+  - component: {fileID: 1323173345}
+  m_Layer: 5
+  m_Name: ItemSelectController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1323173344
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323173343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 840549635}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1323173345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323173343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db22a7a7a58c4f339d6162595b7de7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wrongStatusObj: {fileID: 1599927231}
+  trashBtn: {fileID: 1989668856}
+  kitsBtn: {fileID: 30731295}
+  itemSlot: {fileID: 1500629162}
 --- !u!1 &1345652660
 GameObject:
   m_ObjectHideFlags: 0
@@ -7840,12 +7873,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ba7f242afc040cf922022baa4fbcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrongStatusObj: {fileID: 0}
-  itemDetail: {fileID: 0}
-  getItemStatus: 0
-  showTrashBtn: {fileID: 0}
-  showKitsBtn: {fileID: 0}
-  itemSlot: {fileID: 0}
+  itemDetail: {fileID: 311787853}
+  getCorrectItem: 0
+  itemSelectController: {fileID: 1323173345}
 --- !u!114 &1345652663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7892,7 +7922,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1345652662}
         m_TargetAssemblyTypeName: ChooseItemBtn, Assembly-CSharp
-        m_MethodName: GetWrongItem
+        m_MethodName: GetItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8026,7 +8056,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1371302608}
         m_TargetAssemblyTypeName: ChooseItemBtn, Assembly-CSharp
-        m_MethodName: GetWrongItem
+        m_MethodName: GetItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8086,12 +8116,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ba7f242afc040cf922022baa4fbcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrongStatusObj: {fileID: 0}
-  itemDetail: {fileID: 0}
-  getItemStatus: 0
-  showTrashBtn: {fileID: 0}
-  showKitsBtn: {fileID: 0}
-  itemSlot: {fileID: 0}
+  itemDetail: {fileID: 1585056373}
+  getCorrectItem: 0
+  itemSelectController: {fileID: 1323173345}
 --- !u!1 &1376015271
 GameObject:
   m_ObjectHideFlags: 0
@@ -9075,7 +9102,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1486322055}
         m_TargetAssemblyTypeName: ChooseItemBtn, Assembly-CSharp
-        m_MethodName: GetWrongItem
+        m_MethodName: GetItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9135,12 +9162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ba7f242afc040cf922022baa4fbcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrongStatusObj: {fileID: 0}
-  itemDetail: {fileID: 0}
-  getItemStatus: 0
-  showTrashBtn: {fileID: 0}
-  showKitsBtn: {fileID: 0}
-  itemSlot: {fileID: 0}
+  itemDetail: {fileID: 317263047}
+  getCorrectItem: 0
+  itemSelectController: {fileID: 1323173345}
 --- !u!1 &1495409670
 GameObject:
   m_ObjectHideFlags: 0
@@ -9677,7 +9701,7 @@ RectTransform:
   m_GameObject: {fileID: 1599927231}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.39088544, y: 0.39088544, z: 0.39088544}
+  m_LocalScale: {x: 0.3908854, y: 0.3908854, z: 0.3908854}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1058683641}
@@ -9864,7 +9888,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1685124630}
         m_TargetAssemblyTypeName: ChooseItemBtn, Assembly-CSharp
-        m_MethodName: GetWrongItem
+        m_MethodName: GetItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9924,12 +9948,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ba7f242afc040cf922022baa4fbcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrongStatusObj: {fileID: 0}
-  itemDetail: {fileID: 0}
-  getItemStatus: 0
-  showTrashBtn: {fileID: 0}
-  showKitsBtn: {fileID: 0}
-  itemSlot: {fileID: 0}
+  itemDetail: {fileID: 1155160274}
+  getCorrectItem: 0
+  itemSelectController: {fileID: 1323173345}
 --- !u!1 &1702760733
 GameObject:
   m_ObjectHideFlags: 0
@@ -10432,7 +10453,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1737828484}
         m_TargetAssemblyTypeName: ChooseItemBtn, Assembly-CSharp
-        m_MethodName: GetWrongItem
+        m_MethodName: GetItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10492,12 +10513,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ba7f242afc040cf922022baa4fbcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrongStatusObj: {fileID: 0}
-  itemDetail: {fileID: 0}
-  getItemStatus: 0
-  showTrashBtn: {fileID: 0}
-  showKitsBtn: {fileID: 0}
-  itemSlot: {fileID: 0}
+  itemDetail: {fileID: 1712198192}
+  getCorrectItem: 0
+  itemSelectController: {fileID: 1323173345}
 --- !u!1 &1761594788
 GameObject:
   m_ObjectHideFlags: 0
