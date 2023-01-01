@@ -1,20 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SlotItem : MonoBehaviour
 {
-    private int _index = 1;
-    
     #region slot item
     
+    private int _index = 1;
+    private const int SlotSize = 3;
     [Header("Slot item")]
     [SerializeField] private GameObject slot1;
     [SerializeField] private GameObject slot2;
     [SerializeField] private GameObject slot3;
-    
-    protected readonly int SlotSize = 3;
-    
+
     private void ShowSlot(int index)
     {
         switch (index)
@@ -39,9 +35,7 @@ public class SlotItem : MonoBehaviour
 
         }
     }
-    #endregion
-    
-    
+
     public void Previous()
     {
         if (_index == 1)
@@ -56,7 +50,7 @@ public class SlotItem : MonoBehaviour
 
     public void Next()
     {
-        if (_index == 3)
+        if (_index == SlotSize)
         {
             ShowSlot(3);
             return;
@@ -66,4 +60,6 @@ public class SlotItem : MonoBehaviour
         ShowSlot(_index);
 
     }
+    
+    #endregion
 }
