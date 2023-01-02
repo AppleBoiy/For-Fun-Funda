@@ -67,6 +67,13 @@ namespace DraggableObj
             
          #endregion
 
+         if (slotType == "set")
+         {
+            OnDropAction(4, outSidePosition, eventData);
+            showObj1.SetActive(true);
+            return;
+         }
+
          #region Trash slot
          if (dragObjectType == "S" || dragObjectType == "T")
          {
