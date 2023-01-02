@@ -74,6 +74,13 @@ namespace DraggableObj
             return;
          }
 
+         if (slotType == "hand")
+         {
+            OnDropAction(8, outSidePosition, eventData);
+            sceneCounter.CorrectAnswer();
+            return;
+         }
+
          #region Trash slot
          if (dragObjectType == "S" || dragObjectType == "T")
          {
