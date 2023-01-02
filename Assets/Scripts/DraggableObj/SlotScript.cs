@@ -132,6 +132,8 @@ namespace DraggableObj
                   OnDropAction(slotType == $"Transpore" ? 4 : 3, outSidePosition, eventData);
                   if (slotType == "Transpore")
                      OnDropAction(9, outSidePosition, eventData);
+                  showObj1.SetActive(true);
+                  hideObj1.SetActive(false);
                   break;
                
                case "Tegadrem":
