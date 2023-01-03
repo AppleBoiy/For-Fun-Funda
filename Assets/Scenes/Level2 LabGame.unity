@@ -1874,7 +1874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 500ef1423d3914e038f2b1e6f8fe755e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectCount: 9
+  collectCount: 8
   nextGameDialogBox: {fileID: 1783176021}
   gameCounter: {fileID: 0}
   addScoreCounter: 0
@@ -2338,7 +2338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 216041705}
   initPos: {x: 0, y: 0}
-  id: 2
+  id: 3
   type: 
   room: 
 --- !u!114 &1388741667
