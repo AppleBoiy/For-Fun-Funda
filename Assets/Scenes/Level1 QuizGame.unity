@@ -2269,7 +2269,7 @@ MonoBehaviour:
       loop: 0
     source: {fileID: 0}
   - name: GameMusic
-    clip: {fileID: 8300000, guid: 5c2d1fcea55170649a5e1b77c5181d67, type: 3}
+    clip: {fileID: 8300000, guid: eda37204aa7b6429abc2c5f195b825f6, type: 3}
     parameters:
       volume: 0.2
       pitch: 1
