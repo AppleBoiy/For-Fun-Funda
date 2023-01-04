@@ -69,11 +69,8 @@ namespace DraggableObj
 
          if (slotType == "set")
          {
-            Debug.Log("get set");
-            
             OnDropAction(4, outSidePosition, eventData);
             showObj1.SetActive(true);
-            sceneCounter.CorrectAnswer();
             return;
          }
 
@@ -123,7 +120,6 @@ namespace DraggableObj
 
          if (dragObjectRoom == "CatheterScene")
          {
-            Debug.Log("Catheter scene");
                
             //Catheter
             switch (dragObjectType)
@@ -142,20 +138,14 @@ namespace DraggableObj
                   Debug.Log("Get set");
                   OnDropAction(slotType == $"set" ? 8 : 3, outSidePosition, eventData);
                   if (slotType == "set")
-                  {
                      OnDropAction(9, outSidePosition, eventData);
-                     gameCounter.CorrectAnswer();
-                  }
                   break;
                
                case "Transpore":
                   Debug.Log("Get Transpore");
                   OnDropAction(slotType == $"Transpore" ? 4 : 3, outSidePosition, eventData);
                   if (slotType == "Transpore")
-                  {
                      OnDropAction(9, outSidePosition, eventData);
-                     sceneCounter.CorrectAnswer();
-                  }
                   showObj1.SetActive(true);
                   hideObj1.SetActive(false);
                   break;
@@ -164,11 +154,7 @@ namespace DraggableObj
                   Debug.Log("Get Tegadrem");
                   OnDropAction(slotType == $"Tegadrem" ? 8 : 3, outSidePosition, eventData);
                   if (slotType == "Tegadrem")
-                  {
                      OnDropAction(9, outSidePosition, eventData);
-                     sceneCounter.CorrectAnswer();
-                  }
-                     
                   break;
             }
             return;

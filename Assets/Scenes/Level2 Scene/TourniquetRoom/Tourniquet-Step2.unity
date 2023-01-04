@@ -1048,7 +1048,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1088,7 +1088,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1293777382}
-  - {fileID: 1202099417}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1831,6 +1830,7 @@ RectTransform:
   - {fileID: 1355686995}
   - {fileID: 600490438}
   - {fileID: 2127011491}
+  - {fileID: 1202099417}
   m_Father: {fileID: 571961120}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1858,7 +1858,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1355686995
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2320,7 +2320,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 571961120}
+    m_TransformParent: {fileID: 1293777382}
     m_Modifications:
     - target: {fileID: 7044765089623535754, guid: 36fd41af5978744ca960822fa4098947, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2396,7 +2396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7044765089793944772, guid: 36fd41af5978744ca960822fa4098947, type: 3}
       propertyPath: m_AnchorMax.x
