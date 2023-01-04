@@ -9,12 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Level2 LabGame.unity
-    guid: ccdbeb92461134220a0732826dbaf0eb
-  - enabled: 1
-    path: Assets/Scenes/Level1 QuizGame.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
     path: Assets/Scenes/Level2 Scene/PrepareSetRoom/CleanSet.unity
     guid: 7103be56a3bbe4373b1448e920f85bed
   - enabled: 1
@@ -26,15 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level2 Scene/TourniquetRoom/Tourniquet-Step1.unity
     guid: 336c921dddd064173a3766e158918adb
-  - enabled: 0
-    path: Assets/Scenes/LiquidScene.unity
-    guid: 7a0068539e12d4edcbbc3de51079f1c0
-  - enabled: 1
-    path: Assets/Scenes/Level1 QuizGame.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Scenes/Level2 LabGame.unity
-    guid: ccdbeb92461134220a0732826dbaf0eb
   - enabled: 1
     path: Assets/Scenes/Level2 Scene/PrepareSetRoom/CleanSet.unity
     guid: 7103be56a3bbe4373b1448e920f85bed
