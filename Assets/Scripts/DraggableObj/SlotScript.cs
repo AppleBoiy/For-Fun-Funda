@@ -67,6 +67,63 @@ namespace DraggableObj
             
          #endregion
 
+         
+         #region Catheter room
+
+         if (dragObjectRoom == "CatheterScene")
+         {
+            Debug.Log(("CatheterScene"));
+
+            //Catheter
+            switch (dragObjectType)
+            {
+               case "catheter":
+                  OnDropAction(slotType == $"trueVein" ? 1 : 3, outSidePosition, eventData);
+                  break;
+               
+               case "finger":
+                  Debug.Log("Get finger");
+                  sceneCounter.UpdateSceneScore();
+                  OnDropAction(8, outSidePosition, eventData);
+                  break;
+               
+               case "set":
+                  Debug.Log("Get set");
+                  OnDropAction(slotType == $"set" ? 8 : 3, outSidePosition, eventData);
+                  if (slotType == "set")
+                  {
+                     OnDropAction(9, outSidePosition, eventData);
+                  }
+                     
+                  break;
+               
+               case "Transpore":
+                  Debug.Log("Get Transpore");
+                  OnDropAction(slotType == $"Transpore" ? 4 : 3, outSidePosition, eventData);
+                  if (slotType == "Transpore")
+                  {
+                     OnDropAction(9, outSidePosition, eventData);
+                  }
+                  
+                  showObj1.SetActive(true);
+                  hideObj1.SetActive(false);
+                  break;
+               
+               case "Tegadrem":
+                  Debug.Log("Get Tegadrem");
+                  OnDropAction(slotType == $"Tegadrem" ? 8 : 3, outSidePosition, eventData);
+                  if (slotType == "Tegadrem")
+                  {
+                     OnDropAction(9, outSidePosition, eventData);
+                  }
+                     
+                  break;
+            }
+            return;
+         }
+
+         #endregion
+         
          if (slotType == "set")
          {
             OnDropAction(4, outSidePosition, eventData);
@@ -116,51 +173,6 @@ namespace DraggableObj
          }
          #endregion
 
-         #region Catheter room
-
-         if (dragObjectRoom == "CatheterScene")
-         {
-               
-            //Catheter
-            switch (dragObjectType)
-            {
-               case "catheter":
-                  OnDropAction(slotType == $"trueVein" ? 1 : 3, outSidePosition, eventData);
-                  break;
-               
-               case "finger":
-                  Debug.Log("Get finger");
-                  sceneCounter.UpdateSceneScore();
-                  OnDropAction(8, outSidePosition, eventData);
-                  break;
-               
-               case "set":
-                  Debug.Log("Get set");
-                  OnDropAction(slotType == $"set" ? 8 : 3, outSidePosition, eventData);
-                  if (slotType == "set")
-                     OnDropAction(9, outSidePosition, eventData);
-                  break;
-               
-               case "Transpore":
-                  Debug.Log("Get Transpore");
-                  OnDropAction(slotType == $"Transpore" ? 4 : 3, outSidePosition, eventData);
-                  if (slotType == "Transpore")
-                     OnDropAction(9, outSidePosition, eventData);
-                  showObj1.SetActive(true);
-                  hideObj1.SetActive(false);
-                  break;
-               
-               case "Tegadrem":
-                  Debug.Log("Get Tegadrem");
-                  OnDropAction(slotType == $"Tegadrem" ? 8 : 3, outSidePosition, eventData);
-                  if (slotType == "Tegadrem")
-                     OnDropAction(9, outSidePosition, eventData);
-                  break;
-            }
-            return;
-         }
-
-         #endregion
 
          #region Check only true false
          if (slotType == "except")

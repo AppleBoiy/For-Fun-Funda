@@ -162,8 +162,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -628, y: 205.09}
+  m_SizeDelta: {x: -1619.829, y: -769.819}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &27947758
 CanvasRenderer:
@@ -254,15 +254,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 500ef1423d3914e038f2b1e6f8fe755e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectCount: 1
+  collectCount: 0
   nextGameDialogBox: {fileID: 46085990}
   gameCounter: {fileID: 2127011490}
   addScoreCounter: 1
   wrongItemGet: {fileID: 0}
   correctItemGet: {fileID: 0}
-  objectToShow: {fileID: 0}
-  objectToHide: {fileID: 0}
-  showObj1: {fileID: 0}
+  objectToShow: {fileID: 903448101}
+  objectToHide: {fileID: 27947755}
+  showObj1: {fileID: 905217371}
   showObj2: {fileID: 0}
   hideObj1: {fileID: 0}
   hideObj2: {fileID: 0}
@@ -418,7 +418,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 357.888}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1302, y: -319}
+  m_AnchoredPosition: {x: 1278, y: -321}
   m_SizeDelta: {x: 2284.139, y: 799.903}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &103873442
@@ -808,8 +808,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21, y: 119}
-  m_SizeDelta: {x: 1459.1504, y: 1219.0729}
+  m_AnchoredPosition: {x: 0.000015259, y: 41}
+  m_SizeDelta: {x: 1336.193, y: 1106.807}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &274468753
 MonoBehaviour:
@@ -886,7 +886,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 232.83167, y: 123.53955}
+  m_AnchoredPosition: {x: 1532, y: 327}
   m_SizeDelta: {x: 378.2495, y: 185.6437}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &317450059
@@ -1666,7 +1666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 500ef1423d3914e038f2b1e6f8fe755e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectCount: 1
+  collectCount: 0
   nextGameDialogBox: {fileID: 0}
   gameCounter: {fileID: 2127011490}
   addScoreCounter: 1
@@ -2615,8 +2615,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 500ef1423d3914e038f2b1e6f8fe755e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectCount: 1
-  nextGameDialogBox: {fileID: 27947755}
+  collectCount: 0
+  nextGameDialogBox: {fileID: 0}
   gameCounter: {fileID: 2127011490}
   addScoreCounter: 1
   wrongItemGet: {fileID: 249676276}

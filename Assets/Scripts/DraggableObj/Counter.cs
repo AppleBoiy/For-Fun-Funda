@@ -6,7 +6,7 @@ namespace DraggableObj
     public class Counter : MonoBehaviour
     {
         #region Counter Atrributes
-        private int _counter;
+        private int _counter = 0;
 
         [Header("Count to finish")] 
         [SerializeField] public int totalCount;
@@ -25,7 +25,7 @@ namespace DraggableObj
 
         [Header("Scene score")] 
         [SerializeField] private int totalSceneScore;
-        private int _sceneScore;
+        private int _sceneScore = 0;
         
         #endregion
         
